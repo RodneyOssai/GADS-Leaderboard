@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.figurehowto.gadsleaderboard.services.SubmitToGoogleFormsWebService;
@@ -67,6 +68,14 @@ public class AreYouSure extends Activity {
                         startActivity(new Intent(AreYouSure.this, SubmitFailed.class));
                     }
                 });
+            }
+        });
+
+        ImageView cancel = findViewById(R.id.cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
